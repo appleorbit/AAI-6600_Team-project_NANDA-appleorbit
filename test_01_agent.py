@@ -1,28 +1,18 @@
 import asyncio
 from agent_reasoning import handle_user_query
 
-async def test():
 
-    response = await handle_user_query(
-        "What courses do I have?"
-    )
-
-    print(response)
-
-asyncio.run(test())
-
-import asyncio
-from agent_reasoning import handle_user_query
-
-
-async def test():
-
+async def main():
+    # example user question
     query = "What courses do I have?"
 
+    print("User:", query)
+
+    # call the agent
     response = await handle_user_query(query)
 
-    print("User:", query)
     print("Agent:", response)
 
 
-asyncio.run(test())
+if __name__ == "__main__":
+    asyncio.run(main())
